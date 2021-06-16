@@ -1,0 +1,67 @@
+.md {
+    :host {
+      ion-content {
+        .top-logo {
+          width: 60%;
+          margin: auto;
+          margin-top: 30%;
+        }
+  
+        #txtWelcome {
+          margin-top: 30%;
+          margin-bottom: 10%;
+          font-size: 28px;
+          font-weight: bold;
+          color: var(--dark-green-turquesa);
+        }
+  
+        .forgotPass {
+          font-weight: bold;
+          color: var(--light-gray);
+        }
+  
+        .ion-text-center {
+          margin-top: 5%;
+        }
+  
+        #txtLogin {
+          font-size: 20px;
+        }
+  
+        .txtRegister {
+          font-weight: bold;
+          color: var(--dark-green-turquesa);
+        }
+      }
+  
+      ion-label {
+        color: var(--dark-gray);
+        font-size: 20px;
+        font-weight: normal;
+        align-content: left;
+        margin-top: 5%;
+      }
+  
+      ion-item {
+        margin: auto;
+        width: 78%;
+      }
+  
+      ion-input {
+        input {
+          color: var(--app-color-dark) !important;
+        }
+      }
+  
+      ion-button {
+        margin: auto;
+        margin-top: 8%;
+        width: 75%;
+        --background: linear-gradient(to right,
+            var(--btn-color-top),
+            var(--btn-color-bottom));
+        font-size: 100%;
+        font-weight: bold;
+      }
+    }
+  }

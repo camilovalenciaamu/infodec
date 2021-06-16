@@ -1,0 +1,78 @@
+<ion-buttons slot="start">
+  <ion-back-button
+    id="backButton"
+    color="primary"
+    defaultHref="/"
+  ></ion-back-button>
+</ion-buttons>
+<ion-content>
+  <div>
+    <form [formGroup]="userForm" (ngSubmit)="saveUser(userForm.value)">
+      <ion-item>
+        <ion-label position="stacked" text-center>Nombres </ion-label>
+        <ion-input
+          formControlName="nombre"
+          type="text"
+          placeholder=""
+        ></ion-input>
+      </ion-item>
+      <div class="error-message">
+        <small><strong>{{getError("nombre")}}</strong> </small>
+      </div>
+      <ion-item>
+        <ion-label position="stacked" text-center>Apellidos </ion-label>
+        <ion-input
+          formControlName="apellido"
+          type="text"
+          placeholder=""
+        ></ion-input>
+      </ion-item>
+      <div class="error-message">
+        <small><strong>{{getError("apellido")}}</strong> </small>
+      </div>
+      <ion-item>
+        <ion-label position="stacked" text-center>Número de cédula </ion-label>
+        <ion-input
+          formControlName="cedula"
+          type="number"
+          placeholder=""
+        ></ion-input>
+      </ion-item>
+      <div class="error-message">
+        <small><strong>{{getError("cedula")}}</strong> </small>
+      </div>
+      <ion-item>
+        <ion-label position="stacked" text-center>¿Es comercial?</ion-label>
+        <ion-select
+          formControlName="es_comercio"
+          placeholder="Seleccione una opción"
+        >
+          <ion-select-option value="1">Sí</ion-select-option>
+          <ion-select-option value="2">No</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div class="error-message">
+        <small><strong>{{getError("es_comercio")}}</strong> </small>
+      </div>
+      <ion-button
+        [disabled]="userForm.invalid"
+        type="submit"
+        shape="round"
+        expand="full"
+        size="large"
+      >
+        CREAR CUENTA
+      </ion-button>
+    </form>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <a id="txtLogin" centrar (click)="goToLogin()">INICIAR SESIÓN</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div *ngIf="product_success" class="alert-success">
+      <strong class="alert alert-success">Operación exitosa</strong>
+    </div>
+  </div>
+</ion-content>

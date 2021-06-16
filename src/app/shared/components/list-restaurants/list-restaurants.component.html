@@ -1,0 +1,25 @@
+<div *ngIf="loading" class="divIonSpinner">
+  <ion-spinner color="secondary" name="lines"></ion-spinner>
+</div>
+<div id="categories">
+  <ion-grid>
+    <ion-row>
+      <ion-card *ngFor="let restaurant of list_restaurants; let indice = index">
+        <img
+          class="imgCategory"
+          src="../../../assets/images/r{{ indice + 1 }}.jpg"
+        />
+        <ion-card-subtitle id="ionCardSubtituleCategory">
+          <p class="text">
+            <strong>{{ restaurant.nombre }}</strong>
+          </p>
+          <p class="text">{{ restaurant.categoria }}</p>
+          <p class="text">
+            {{ restaurant.puntuacion }}
+            <ion-icon name="star-half"></ion-icon>
+          </p>
+        </ion-card-subtitle>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</div>

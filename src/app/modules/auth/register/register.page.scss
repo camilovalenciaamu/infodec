@@ -1,0 +1,63 @@
+.md {
+    :host {
+      ion-content {
+        .top-logo {
+          width: 60%;
+          margin: auto;
+          margin-top: 30%;
+        }
+  
+        .ion-text-center {
+          margin-top: 5%;
+          margin-bottom: 5%;
+        }
+  
+        #txtLogin {
+          font-weight: bold;
+          color: var(--text-turquesa);
+        }
+      }
+  
+      ion-input {
+        input {
+          color: var(--app-color-dark) !important;
+        }
+      }
+  
+      ion-item {
+        margin: auto;
+        width: 78%;
+      }
+  
+      #backButton {
+        margin-left: 8%;
+      }
+  
+      ion-button {
+        margin: auto;
+        margin-top: 8%;
+        width: 75%;
+        --background: linear-gradient(to right,
+            var(--btn-color-top),
+            var(--btn-color-bottom));
+        font-size: 100%;
+        font-weight: bold;
+      }
+  
+      ion-label {
+        color: var(--dark-gray);
+        font-size: 20px;
+        font-weight: normal;
+        text-align: left;
+        margin-top: 5%;
+      }
+      .error-message{
+        color: red;
+        text-align: center;
+      }
+      .alert-success{
+        color: var(--dark-gray);
+        text-align: center;
+      }
+    }
+  }

@@ -1,0 +1,37 @@
+<ion-content>
+  <div class="ion-text-center">
+    <h1 id="txtWelcome">¡Bienvenido/a!</h1>
+  </div>
+  <div class="padding">
+    <form id="frmLogin">
+      <ion-item>
+        <ion-label color="dark-light" position="stacked">
+          Correo electrónico
+        </ion-label>
+        <ion-input type="email" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password" placeholder=""></ion-input>
+      </ion-item>
+      <ion-button
+        type="submit"
+        shape="round"
+        (click)="login()"
+        expand="full"
+        size="large"
+      >
+        Iniciar sesión
+      </ion-button>
+    </form>
+    <ion-grid fixed>
+      <hr style="border-top: 1px solid gray; width: 53%" />
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <a class="txtRegister" centrar (click)="goToRegister()">REGÍSTRATE</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
