@@ -1,0 +1,10 @@
+ion-button {
+    margin: auto;
+    margin-top: 8%;
+    width: 50%;
+    --background: linear-gradient(to right,
+        var(--btn-color-top),
+        var(--btn-color-bottom));
+    font-size: 100%;
+    font-weight: bold;
+  }
